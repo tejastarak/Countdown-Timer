@@ -1,38 +1,98 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background: linear-gradient(to top, #3d8de8, #d857e9); /* Dark blue to light blue gradient */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form label,
+form input {
+  margin-bottom: 10px;
+}
+
+#targetDate {
+  padding: 10px 20px; /* Add padding */
+  border: 2px solid white; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  background-color: transparent; /* Transparent background */
+  color: white; /* Text color */
+}
+
+#targetDate:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #00bcd4; /* Change border color on focus */
+}
+
+.countdown {
+  text-align: center;
+}
+
+/* Add styles for countdown boxes */
+.countdown-boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.countdown-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  padding: 20px; /* Adjust padding for the size of the box */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  background: linear-gradient(to bottom right, #5ca0ed, #bf10c2); /* Pink to light blue gradient background */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.countdown-box p {
+  font-size: 36px; /* Increase font size for better visibility */
+  margin: 0;
+  color: white; /* Set text color to white */
+}
+
+.countdown-box span {
+  font-size: 16px;
+  color: white; /* Set text color to white */
+}
+
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: #002147;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.countdown-over-message {
+  margin-top: 20px;
 }
